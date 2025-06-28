@@ -3,8 +3,5 @@ class Solution:
         h=defaultdict(int)
         for num in nums:
             h[num]+=1
-        for k,v in h.items():
-            if v>len(nums)/2:
-                return k
-        return 0
+        return max(h,key=h.get)
         
